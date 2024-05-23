@@ -28,7 +28,7 @@ CREATE TABLE `alunos` (
   `matricula` int NOT NULL,
   PRIMARY KEY (`matricula`),
   UNIQUE KEY `matricula_UNIQUE` (`id_aluno`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `alunos` (
 
 LOCK TABLES `alunos` WRITE;
 /*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
-INSERT INTO `alunos` VALUES (1,'Marcos',992),(11,'patrick',1123),(2,'Gabriel',2355),(16,'Juio Alberto',8293),(3,'Pedro',8734),(9,'Jorge Lucas',8772),(8,'Carlos',8882),(14,'kauan',9025),(10,'rodrigo henrique',9088),(6,'Paulinho',9264),(15,'Joao Pedro',9267);
+INSERT INTO `alunos` VALUES (1,'Marcos',992),(11,'patrick',1123),(2,'Gabriel',2355),(3,'Pedro',8734),(9,'Jorge Lucas',8772),(8,'Carlos',8882),(14,'kauan',9025),(10,'rodrigo henrique',9088),(6,'Paulinho',9264),(15,'Joao Pedro',9267);
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +87,7 @@ CREATE TABLE `notas` (
   KEY `fk_notas_alunos_idx` (`alunos_matricula`),
   KEY `fk_notas_disciplina1_idx` (`disciplina_id_disciplina`),
   CONSTRAINT `fk_notas_disciplina1` FOREIGN KEY (`disciplina_id_disciplina`) REFERENCES `disciplina` (`id_disciplina`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `notas` (
 
 LOCK TABLES `notas` WRITE;
 /*!40000 ALTER TABLE `notas` DISABLE KEYS */;
-INSERT INTO `notas` VALUES (1,'8','7','5',2355,4,NULL),(5,'3','7','5',8734,2,'6.0'),(7,'3','7','5',992,4,'3.3'),(9,'9','5','8',772,5,NULL),(10,'8','5','7',2355,5,NULL),(11,'8','6','9',8922,5,NULL),(12,'8','5','0',8922,6,NULL),(31,'7','3','6',992,5,'3.3'),(32,'8','5','9',992,8,'6.0'),(34,'8','4','6',8734,3,'6.0'),(35,'9','3','6',9264,6,'6.0'),(36,'8','5','9',9274,4,'7.3'),(37,'9','2','6',8882,2,'5.7'),(38,'8','3','6',992,6,'3.3'),(39,'9','4','8',992,6,'3.3'),(40,'5','3','2',992,3,'3.3'),(41,'8','4','6',992,8,'6.0'),(42,'9','4','7',8772,7,'6.0'),(43,'8','4','6',8772,7,'6.0'),(44,'7','5','6',8772,8,'6.0'),(45,'8','4','6',8772,4,'6.0'),(46,'3','4','6',8772,5,'4.3'),(47,'7','3','5',9088,6,'5.0'),(48,'7','5','6',8772,7,'6.0'),(49,'6','4','5',992,7,'5.0');
+INSERT INTO `notas` VALUES (1,'8','7','5',2355,4,NULL),(5,'3','7','5',8734,2,'6.0'),(7,'3','7','5',992,4,'3.3'),(9,'9','5','8',772,5,NULL),(10,'8','5','7',2355,5,NULL),(11,'8','6','9',8922,5,NULL),(12,'8','5','0',8922,6,NULL),(31,'7','3','6',992,5,'3.3'),(32,'8','5','9',992,8,'6.0'),(34,'8','4','6',8734,3,'6.0'),(35,'9','3','6',9264,6,'6.0'),(36,'8','5','9',9274,4,'7.3'),(37,'9','2','6',8882,2,'5.7'),(39,'9','4','8',992,6,'3.3'),(40,'5','3','2',992,3,'3.3'),(44,'7','5','6',8772,8,'6.0'),(45,'8','4','6',8772,4,'6.0'),(46,'3','4','6',8772,5,'4.3'),(47,'7','3','5',9088,6,'5.0'),(48,'7','5','6',8772,7,'6.0'),(49,'6','4','5',992,7,'5.0'),(50,'8','3','5',1123,3,'5.3'),(51,'2','3','5',9025,1,'3.3'),(52,'5','6','5',9267,1,'5.3');
 /*!40000 ALTER TABLE `notas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-23 10:25:11
+-- Dump completed on 2024-05-23 20:23:33
